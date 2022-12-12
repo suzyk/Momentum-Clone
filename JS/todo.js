@@ -7,6 +7,11 @@ const TODOS_KEYS = "todos"
 function saveTodos(){
     localStorage.setItem(TODOS_KEYS, JSON.stringify(toDos));
 }
+/*
+function displayTodoForm(){
+    todoForm.classList.remove(HIDDEN_CLASSNAME);
+}
+*/
 function handleSubmit(event){
     event.preventDefault();
     const newTodo = todoInput.value;

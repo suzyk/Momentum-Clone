@@ -1,6 +1,7 @@
 //const API_key = "e20b0d4e44f38c0ff91e099610ce28d5";
 
 function onGeoSuccess(position){
+    console.log("geo successful");
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_key}`;
@@ -12,6 +13,7 @@ function onGeoSuccess(position){
             const cityContainer = document.querySelector("#weather span:last-child");
             weatherContainer.innerText = `${data.weather[0].main} / ${data.main.temp}`;
             cityContainer.innerText = data.name;
+            console.log("adding text to weather box");
         })
 }
 function onGeoError(){
@@ -19,3 +21,4 @@ function onGeoError(){
 }
 
 navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+

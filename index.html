@@ -7,32 +7,44 @@
     <title>Momentum App</title>
   </head>
   <body>
-    <form id="login-form-html" class="hidden"> 
-        <input required maxlength="15" type="text" placeholder="What is your name?" />
-        <button>Log In</button>
+    <div id ="vertical-align">
+    <form id="login-form" class="hidden"> 
+        <h1 class="hello">Hello, what's your name?</h1>
+        <!--<input required maxlength="15" type="text" placeholder="your name" />-->
+        <input type="text" placeholder=""><br>
+        <button class="continueBtn"><span>Continue</span></button>
     </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-
-    <form id="todo-form"> 
-        <input id="todo-input" required type="text" placeholder="Write todo list and press enter"/>
-    </form>
-    <ul id="todo-list"></ul>
-
-    <div id="weather">
-        <span></span>
-        <span></span>
     </div>
-    <div id="quotes">
-        <span></span>
-        <span></span>
+
+    <div id ="mainScreen" class="hidden">
+      <div id ="vertical-align">
+        <h2 id="clock">00:00</h2>
+        <h1 id="greeting"></h1>
+      
+
+        <form id="todo-form"> 
+          <h1 id="todoQuestion" >What is your main focus today?</h1>
+          <input id="todo-input" required type="text" placeholder="Write todo list and press enter"/>
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
+
+      <div id="weather">
+          <span></span>
+          <span></span>
+      </div>
+      <div id="quotes">
+          <span></span>
+          <span></span>
+      </div>
     </div>
-    <script src="JS/greeting.js"></script>
+
+    <script src="JS/todo.js"></script>
     <script src="JS/clock.js"></script>
     <script src="JS/quotes.js"></script>
     <script src="JS/background.js"></script>
-    <script src="JS/todo.js"></script>
     <script src="JS/weather.js"></script>
     <script src="JS/keys.js"></script> 
+    <script src="JS/greeting.js"></script>
   </body>
 </html>
