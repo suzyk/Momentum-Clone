@@ -8,19 +8,16 @@ const HIDDEN_CLASSNAME = "hidden";
 const LOAD_CLASSNAME = "load";
 const USERNAME_KEY = "username";
 
-//const loginButton = document.querySelector("#login-form button"); Css style searching for item
-
 function displayMainScreen(username){
     greeting.innerText = `Hello ${username}`; // ~ button. (Backtick) Same thing as "Hello " + userName;
     mainScreen.classList.remove(HIDDEN_CLASSNAME);
-    console.log("displaying main screen");
+    getWeatherInfo();
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if(savedUsername != null){ // call from localStorage
     displayMainScreen(savedUsername);
-    //displayTodoForm();
 }else {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginSubmit);
@@ -33,7 +30,6 @@ function onLoginSubmit(event){
     let username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     displayMainScreen(username);
-    //displayTodoForm();
     /*
     const userName = loginInput.value;
     if (userName == "") {
