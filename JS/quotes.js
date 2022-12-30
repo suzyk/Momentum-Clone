@@ -24,7 +24,7 @@ const quotes = [
         author: "Walt Whitman"
     },
     {
-        quote: "Be courageous. Challenge orthodoxy. Stand up for what you believe in. When you are in your rocking chair talking to your grandchildren many years from now, be sure you have a good story to tell.",
+        quote: "Be courageous. Challenge orthodoxy.",
         author: "Amal Clooney"
     },
     {
@@ -32,7 +32,7 @@ const quotes = [
         author: "Duchess Meghan"
     },
     {
-        quote: "I just want you to know that if you are out there and you are being really hard on yourself right now for something that has happened ... it's normal. That is what is going to happen to you in life. No one gets through unscathed. We are all going to have a few scratches on us. Please be kind to yourselves and stand up for yourself, please.",
+        quote: "We are all going to have a few scratches on us. Please be kind to yourselves and stand up for yourself, please.",
         author: "Taylor Swift"
     },
     {
@@ -46,5 +46,5 @@ const author = document.querySelector("#quotes span:last-child");
 
 const todaysQuote = quotes[Math.floor(Math.random()* quotes.length)];
 quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+author.innerText = ` -${todaysQuote.author}`;
 //console.log(quotes[Math.floor(Math.random()* quotes.length)]);

@@ -3,6 +3,7 @@ html {
 }
 body {
     min-width: 600px;
+    font-family: 'Abril Fatface', serif;
 }
 .hidden {
     visibility: hidden;
@@ -10,7 +11,7 @@ body {
 }
 
 .hello {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /*font-family:Verdana, Geneva, Tahoma, sans-serif;*/
     text-align: center;
     font-size: 43px;
 }
@@ -38,34 +39,35 @@ body {
 
 #vertical-align {
     position: absolute;
-    top: -40%; bottom: 0; left: 0; right: 0;
+    top: -60%; bottom: 0; left: 0; right: 0;
     margin: auto;
     height: 150px;
     -webkit-box-pack: center;
     -webkit-box-align: center;
 }
 #clock {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /*font-family:Verdana, Geneva, Tahoma, sans-serif;*/
     text-align: center;
-    font-size: 50px;
+    font-size: 100px;
+    margin: 0 auto;
 }
 #greeting {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /*font-family:Verdana, Geneva, Tahoma, sans-serif;*/
     text-align: center;
-    font-size: 43px;
+    font-size: 60px;
     position: relative;
-    top: -20%;
+    top: -40%;
 }
 #todoQuestion {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /*font-family:Verdana, Geneva, Tahoma, sans-serif;*/
     font-weight: lighter;
     text-align: center;
     font-size: 30px;
 }
 #todo-form input {
     border: none;
-    width: 400px;
-    border-bottom: 3px solid white;
+    width: 300px;
+    border-bottom: 2px solid white;
     text-align: center;
     outline: none;
     background-color: rgba(0,0,0,0);
@@ -79,7 +81,7 @@ body {
     margin:10 auto;
     text-align: center;
     list-style: none;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /*font-family:Verdana, Geneva, Tahoma, sans-serif;*/
     font-size: 17px;
     color: white;
     /* disable native checkbox 
@@ -197,6 +199,10 @@ input[type="checkbox"]::before {
     width: 95%;
     margin: 0 auto;
     text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Tangerine', serif;
+    font-size: 30px;
+    text-shadow: 4px 4px 4px #aaa;
 }
 
 .continueBtn{

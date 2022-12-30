@@ -9,18 +9,28 @@ const LOAD_CLASSNAME = "load";
 const USERNAME_KEY = "username";
 
 function displayMainScreen(username){
-    greeting.innerText = `Hello ${username}`; // ~ button. (Backtick) Same thing as "Hello " + userName;
+    greeting.innerText = `${timelyGreeting}, ${username}`; // ~ button. (Backtick) Same thing as "Hello " + userName;
     mainScreen.classList.remove(HIDDEN_CLASSNAME);
     getWeatherInfo();
 }
 
+function updateGreeting(greeting){
+    if (savedUsername != null){
+        greeting.innerText = `${greeting}, ${savedUsername}`;
+    }
+}
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if(savedUsername != null){ // call from localStorage
     displayMainScreen(savedUsername);
+    greeting.addEventListener("mouseenter", handleMouseOnName);
 }else {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginSubmit);
+}
+
+function handleMouseOnName(){
+    console.log("event working");
 }
 
 function onLoginSubmit(event){
