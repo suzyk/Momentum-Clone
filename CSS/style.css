@@ -7,7 +7,14 @@ body {
 }
 .hidden {
     visibility: hidden;
-    /*opacity: 0;*/
+    opacity: 0;
+    transition: visibility 0s 0.8s, opacity 0.8s linear;
+}
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2.2s linear;
+    transition-delay: 1.8s;
 }
 
 .hello {
@@ -15,28 +22,11 @@ body {
     text-align: center;
     font-size: 43px;
 }
-/*
-#mainScreen {
-    margin: auto;
-    
-    opacity: 0; 
-    -webkit-transition: opacity 2s ease-in;
-    -moz-transition: opacity 2s ease-in;
-    -ms-transition: opacity 2s ease-in;
-    -o-transition: opacity 2s ease-in;
-    transition: opacity 2s ease-in;
-}
-
-#mainScreen.load {
-    opacity: 1;
-}
-*/
 #mainScreen {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     margin: auto;
 }
-
 #vertical-align {
     position: absolute;
     top: -60%; bottom: 0; left: 0; right: 0;
@@ -224,7 +214,7 @@ input[type="checkbox"]::before {
     cursor: pointer;
     display: inline-block;
     position: relative;
-   /* transition: 0.5s;*/
+    transition: 0.5s;
 }
   
 .continueBtn span:after {
@@ -233,7 +223,7 @@ input[type="checkbox"]::before {
     opacity: 0;
     top: 0;
     right: -20px;
-    /*transition: 0.5s;*/
+    transition: 0.5s;
 }
   
 .continueBtn:hover span {

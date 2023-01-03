@@ -5,12 +5,14 @@ const greeting = document.querySelector("#greeting");
 const weather = document.querySelector("#weather");
 const mainScreen = document.querySelector("#mainScreen");
 const HIDDEN_CLASSNAME = "hidden";
+const VISIBLE_CLASSNAME = "visible";
 const LOAD_CLASSNAME = "load";
 const USERNAME_KEY = "username";
 
 function displayMainScreen(username){
     greeting.innerText = `${timelyGreeting}, ${username}`; // ~ button. (Backtick) Same thing as "Hello " + userName;
     mainScreen.classList.remove(HIDDEN_CLASSNAME);
+    mainScreen.classList.add(VISIBLE_CLASSNAME);
     getWeatherInfo();
 }
 
