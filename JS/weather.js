@@ -1,5 +1,4 @@
 //const API_key = "e20b0d4e44f38c0ff91e099610ce28d5";
-const CLOUD_ICON = "fa-regular fa-cloud";
 
 function onGeoSuccess(position){
     const lat = position.coords.latitude;
@@ -8,10 +7,13 @@ function onGeoSuccess(position){
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            const weatherContainer = document.querySelector("#weather span:first-child");
-            const cityContainer = document.querySelector("#weather span:last-child");
-            weatherContainer.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+            const weatherContainer = document.querySelector("#temperature");
+            const cityContainer = document.querySelector("#location");
+            const weatherIcon = document.querySelector("#weatherIcon");
+            weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+            weatherContainer.innerText = `${Math.floor(data.main.temp)}°`;
             cityContainer.innerText = data.name;
+            
         })
 }
 function onGeoError(){

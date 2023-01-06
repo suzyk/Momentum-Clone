@@ -20,8 +20,6 @@ function getClock(){
     }
     
 
-    //clock.innerText =`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-    //console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
 }
 getClock();
 setInterval(getClock,1000);
