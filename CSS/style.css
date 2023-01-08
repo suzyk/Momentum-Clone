@@ -5,7 +5,7 @@ body {
     min-width: 600px;
     font-family: 'Abril Fatface', serif;
 }
-.hidden {
+.fadeout {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.8s, opacity 0.8s linear;
@@ -16,7 +16,9 @@ body {
     transition: opacity 2.2s linear;
     transition-delay: 1.8s;
 }
-
+.hidden {
+    visibility: hidden;
+}
 .hello {
     /*font-family:Verdana, Geneva, Tahoma, sans-serif;*/
     text-align: center;
@@ -27,11 +29,22 @@ body {
     top: 0; bottom: 0; left: 0; right: 0;
     margin: auto;
 }
+#editBtn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    position: relative;
+    top: -20px;
+}
 #vertical-align {
     position: absolute;
     top: -60%; bottom: 0; left: 0; right: 0;
     margin: auto;
     height: 150px;
+    text-align: center;
     -webkit-box-pack: center;
     -webkit-box-align: center;
 }
@@ -47,12 +60,24 @@ body {
     font-size: 60px;
     position: relative;
     top: -40%;
+    display: inline-block;
+    margin: 0 auto;
+}
+#editableText {
+    transition: all 0.3s ease;
+}
+#editableText:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(21, 156, 228, 0.4);
 }
 #todoQuestion {
     /*font-family:Verdana, Geneva, Tahoma, sans-serif;*/
     font-weight: lighter;
     text-align: center;
     font-size: 30px;
+}
+#todo-form {
+    margin-top: 70px;
 }
 #todo-form input {
     border: none;
@@ -166,7 +191,7 @@ input[type="checkbox"]::before {
 }
 #login-form input{
     border: none;
-    width: 600px;
+    width: 400px;
     border-bottom: 3px solid white;
     text-align: center;
     outline: none;

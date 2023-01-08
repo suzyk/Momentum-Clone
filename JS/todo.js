@@ -36,7 +36,6 @@ function handelCheckboxClick(event){
     }
     const li = event.currentTarget.parentNode; 
     const todoIndex = toDos.findIndex((todo) => todo.id == li.id);
-    console.log(`index ${todoIndex}`);
     toDos[todoIndex].completed = !toDos[todoIndex].completed;
 
     saveTodos();
