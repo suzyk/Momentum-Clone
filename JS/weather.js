@@ -10,7 +10,7 @@ function onGeoSuccess(position){
             const weatherContainer = document.querySelector("#temperature");
             const cityContainer = document.querySelector("#location");
             const weatherIcon = document.querySelector("#weatherIcon");
-            weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+            weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
             weatherContainer.innerText = `${Math.floor(data.main.temp)}°`;
             cityContainer.innerText = data.name;
             
