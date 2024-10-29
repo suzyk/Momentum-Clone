@@ -13,8 +13,7 @@ const LOAD_CLASSNAME = "load";
 const USERNAME_KEY = "username";
 
 function displayMainScreen(name){
-    greeting.innerHTML = `${timelyGreeting}, , <span id="editableText" contenteditable="false" onkeypress="return event.keyCode != 13;">${savedUsername}</span>`; // ~ button. (Backtick) Same thing as "Hello " + userName;
-    //username_tag.innerText = `${name}`;
+    greeting.innerHTML = `${timelyGreeting}, <span id="editableText" contenteditable="false" onkeypress="return event.keyCode != 13;">${name}</span>`; // ~ button. (Backtick) Same thing as "Hello " + userName;
     mainScreen.classList.remove(FADEOUT_CLASSNAME);
     mainScreen.classList.add(VISIBLE_CLASSNAME);
     getWeatherInfo();
@@ -22,8 +21,7 @@ function displayMainScreen(name){
 
 function updateGreeting(greeting){
     if (savedUsername != null){
-        //greeting.innerText = `${timelyGreeting}, `; // ~ button. (Backtick) Same thing as "Hello " + userName;
-        //username_tag.innerText = `${savedUsername}`;
+        greeting.innerText = `${timelyGreeting}, `; // ~ button. (Backtick) Same thing as "Hello " + userName;
         greeting.innerHTML = `${greeting}, <span id="editableText" contenteditable="false" onkeypress="return event.keyCode != 13;">${savedUsername}</span>`;
     }
 }
@@ -54,7 +52,7 @@ function onNameChange(){
 function handleEdit(){
     const username = document.querySelector("#editableText");
     username.setAttribute("contenteditable", true);
-    username.addEventListener("blur", onNameChange);
+    username.addEventListener("blur", onNameChange); // blur event is called when element loses focus
     username.focus();
 }
 function onLoginSubmit(event){
